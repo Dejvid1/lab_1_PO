@@ -47,6 +47,22 @@ public class FirstProgram
         //    Console.WriteLine((c * 1.8f) + 32);
         //    c += 3;
         //}
+        
+        //zad 5
+        
+        int n = 0;
 
+        Console.WriteLine("podaj wielkosc choinki");
+        n = Convert.ToInt32(Console.ReadLine());
+
+        for (int i = 0; i <= n; i++)
+        {
+            for (int j = 0; j < i; j++)
+            {
+                Console.Write('*');
+            }
+            Console.WriteLine(' ');
+        }
+        
     }
-} 
+}
