@@ -1,0 +1,52 @@
+using System;
+public class FirstProgram
+{
+    public static void Main(string[] args)
+    {
+        // zad 1
+        //int x = 0;
+        //int y = 0;
+        //Console.WriteLine("podaj wspolrzedne");
+        //x = Convert.ToInt32(Console.ReadLine());
+        //y = Convert.ToInt32(Console.ReadLine());
+        //if (x > 0 && y > 0) Console.Write("1 cwiartka");
+        //else if (x > 0 && y < 0) Console.Write("4 cwiartka");
+        //else if (x < 0 && y > 0) Console.Write("2 cwiartka");
+        //else if (x < 0 && y < 0) Console.Write("3 cwiartka");
+
+
+        ////zad 2
+        //float a = 0f;
+        //float b = 0f;
+        //float c = 0f;
+        //Console.WriteLine("podaj dlugosci bokow");
+
+        //a = float.Parse(Console.ReadLine());
+        //b = float.Parse(Console.ReadLine());
+        //c = float.Parse(Console.ReadLine());
+
+        //if (a + b > c && a + c > b && b + c > a)
+        //{
+        //    Console.WriteLine("obwod = " + (a + b + c));
+        //}
+
+        //zad3
+
+        //int n = 0;
+
+        //Console.WriteLine("podaj ilosc liczb nparzystych");
+        //n = Convert.ToInt32(Console.ReadLine());
+        //for (int i = 1; i <= n; i += 2)
+        //{
+        //    Console.WriteLine(i);
+        //}
+        //zad 4
+        //float c = -27f;
+        //while(c <= 27)
+        //{
+        //    Console.WriteLine((c * 1.8f) + 32);
+        //    c += 3;
+        //}
+
+    }
+} 
