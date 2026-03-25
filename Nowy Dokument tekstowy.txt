@@ -1,68 +1,42 @@
 using System;
+using System.Collections.Generic;
 public class FirstProgram
 {
     public static void Main(string[] args)
     {
-        // zad 1
-        //int x = 0;
-        //int y = 0;
-        //Console.WriteLine("podaj wspolrzedne");
-        //x = Convert.ToInt32(Console.ReadLine());
-        //y = Convert.ToInt32(Console.ReadLine());
-        //if (x > 0 && y > 0) Console.Write("1 cwiartka");
-        //else if (x > 0 && y < 0) Console.Write("4 cwiartka");
-        //else if (x < 0 && y > 0) Console.Write("2 cwiartka");
-        //else if (x < 0 && y < 0) Console.Write("3 cwiartka");
+        //List<string> imiona = new List<string> { "maciek", "daniel", "szymon", "dawid", "piotr", "mikolaj", "tomek", "patryk", "janek", "wiktor" };
 
-
-        ////zad 2
-        //float a = 0f;
-        //float b = 0f;
-        //float c = 0f;
-        //Console.WriteLine("podaj dlugosci bokow");
-
-        //a = float.Parse(Console.ReadLine());
-        //b = float.Parse(Console.ReadLine());
-        //c = float.Parse(Console.ReadLine());
-
-        //if (a + b > c && a + c > b && b + c > a)
+        //for (int i = imiona.Count - 1; i >= 0; i--)
         //{
-        //    Console.WriteLine("obwod = " + (a + b + c));
+        //    Console.WriteLine(imiona[i]);
         //}
 
-        //zad3
-
+        //int[] liczby;
         //int n = 0;
-
-        //Console.WriteLine("podaj ilosc liczb nparzystych");
+        //Console.WriteLine("podaj ilosc liczb: ");
         //n = Convert.ToInt32(Console.ReadLine());
-        //for (int i = 1; i <= n; i += 2)
+        //liczby = new int[n];
+        //Console.WriteLine("podaj liczby: ");
+        //for (int i = 0; i < n; i++)
         //{
-        //    Console.WriteLine(i);
+        //    liczby[i] = Convert.ToInt32(Console.ReadLine());
         //}
-        //zad 4
-        //float c = -27f;
-        //while(c <= 27)
+        //foreach (int i in liczby)
         //{
-        //    Console.WriteLine((c * 1.8f) + 32);
-        //    c += 3;
+        //    if (i % 2 == 0) Console.WriteLine(i);
         //}
-        
-        //zad 5
-        
-        int n = 0;
 
-        Console.WriteLine("podaj wielkosc choinki");
-        n = Convert.ToInt32(Console.ReadLine());
 
-        for (int i = 0; i <= n; i++)
+        Dictionary<string,int> numery = new Dictionary<string,int>();
+        numery.Add("policja", 997);
+        numery.Add("karetka", 999);
+        numery.Add("straz", 998);
+        numery.Add("straz miejska", 986);
+        numery.Add("numer alarmowy", 112);
+        numery.Add("WOPR", 984);
+        foreach (KeyValuePair<string,int> pair in numery)
         {
-            for (int j = 0; j < i; j++)
-            {
-                Console.Write('*');
-            }
-            Console.WriteLine(' ');
+            Console.WriteLine("{0}: {1}", pair.Key, pair.Value);
         }
-        
     }
 }
