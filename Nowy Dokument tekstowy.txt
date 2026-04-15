@@ -4,11 +4,11 @@ public class FirstProgram
 {
     public static void Main(string[] args)
     {
-        GetText();
-        ConnectWords();
-        CalculateIntrests();
-        TriangleData();
-        DateOperations();
+       // GetText();
+       // ConnectWords();
+       // CalculateIntrests();
+        //TriangleData();
+        //DateOperations();
     }
 
     public static void GetText()
@@ -35,9 +35,12 @@ public class FirstProgram
 
     public static void CalculateIntrests()
     {
+        Console.WriteLine("Podaj swoja kwote: ");
         double kwota = Convert.ToDouble(Console.ReadLine());
-        double startkwota = kwota;
+        Console.WriteLine("Podaj okres pozostawienia: ");
         int okres = Convert.ToInt32(Console.ReadLine());
+        double startkwota = kwota;
+       
         double procent = 0.05;
 
         for (int i = 0; i < okres; i++)
@@ -56,11 +59,14 @@ public class FirstProgram
     }
 
     public static void TriangleData()
-    {
+    { 
+        Console.WriteLine("Podaj 1 punkt: ");
         float x1 = float.Parse(Console.ReadLine());
         float y1 = float.Parse(Console.ReadLine());
+        Console.WriteLine("Podaj 2 punkt: ");
         float x2 = float.Parse(Console.ReadLine());
         float y2 = float.Parse(Console.ReadLine());
+        Console.WriteLine("Podaj 3 punkt: ");
         float x3 = float.Parse(Console.ReadLine());
         float y3 = float.Parse(Console.ReadLine());
 
