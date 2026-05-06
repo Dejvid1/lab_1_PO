@@ -2,121 +2,56 @@ using System;
 
 public class FirstProgram
 {
+    public class Car
+    {
+        public string _brand;
+        public string _model;
+        public int _year;
+
+        public Car()
+        {
+        }
+    }
+
     public static void Main(string[] args)
     {
-       // GetText();
-       // ConnectWords();
-       // CalculateIntrests();
-        //TriangleData();
-        //DateOperations();
-    }
+        List<Car> auta = new List<Car>();
 
-    public static void GetText()
-    {
-        Console.WriteLine("podaj tekst: ");
-        string a = Console.ReadLine();
-        Console.WriteLine(a.ToUpper());
-        Console.WriteLine(a.ToLower());
-        Console.WriteLine(a.Length);
-    }
+        Car c1 = new Car();
+        c1._brand = "Ford";
+        c1._model = "Mustang";
+        c1._year = 1964;
+        Car c2 = new Car();
+        c2._brand = "Volvo";
+        c2._model = "pl800";
+        c2._year = 1968;
+        Car c3 = new Car();
+        c3._brand = "BMW";
+        c3._model = "M1";
+        c3._year = 1978;
+        Car c4 = new Car();
+        c4._brand = "Toyota";
+        c4._model = "Celica";
+        c4._year = 1975;
+        Car c5 = new Car();
+        c5._brand = "Porshe";
+        c5._model = "991";
+        c5._year = 1965;
+        Car c6 = new Car();
+        c6._brand = "x";
+        c6._model = "y";
+        c6._year = 196;
+        Car c7 = new Car();
+        c7._brand = "a";
+        c7._model = "b";
+        c7._year = 165;
 
-    public static void ConnectWords()
-    {
-        string text1 = Console.ReadLine();
-        string text2 = Console.ReadLine();
-        string text3 = Console.ReadLine();
-        string text4 = Console.ReadLine();
-        string text5 = Console.ReadLine();
-
-        string polaczonyTekst = "- - - " + text1 + " " + text2 + " " + text3 + " " + text4 + " " + text5 + " - - -";
-        Console.WriteLine(polaczonyTekst);
-        Console.WriteLine(polaczonyTekst.Length);
-    }
-
-    public static void CalculateIntrests()
-    {
-        Console.WriteLine("Podaj swoja kwote: ");
-        double kwota = Convert.ToDouble(Console.ReadLine());
-        Console.WriteLine("Podaj okres pozostawienia: ");
-        int okres = Convert.ToInt32(Console.ReadLine());
-        double startkwota = kwota;
-       
-        double procent = 0.05;
-
-        for (int i = 0; i < okres; i++)
-        {
-            if (kwota <= 100000)
-            {
-                kwota = kwota * (1 + procent);
-            }
-            else
-            {
-                procent = 0.07;
-                kwota = kwota * (1 + procent);
-            }
-        }
-        Console.WriteLine(kwota - startkwota);
-    }
-
-    public static void TriangleData()
-    { 
-        Console.WriteLine("Podaj 1 punkt: ");
-        float x1 = float.Parse(Console.ReadLine());
-        float y1 = float.Parse(Console.ReadLine());
-        Console.WriteLine("Podaj 2 punkt: ");
-        float x2 = float.Parse(Console.ReadLine());
-        float y2 = float.Parse(Console.ReadLine());
-        Console.WriteLine("Podaj 3 punkt: ");
-        float x3 = float.Parse(Console.ReadLine());
-        float y3 = float.Parse(Console.ReadLine());
-
-        double d = x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2);
-
-        if (d == 0)
-        {
-            Console.WriteLine("to nie trójkąt");
-            return;
-        }
-
-        double a = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
-        double b = Math.Sqrt(Math.Pow(x3 - x2, 2) + Math.Pow(y3 - y2, 2));
-        double c = Math.Sqrt(Math.Pow(x1 - x3, 2) + Math.Pow(y1 - y3, 2));
-
-        double obwod = a + b + c;
-        Console.WriteLine($"Obwód wynosi: {obwod}");
-
-        double pole = Math.Abs(d) / 2;
-        Console.WriteLine($"Pole wynosi: {pole}");
-
-        if (SaPitagorejskie(a, b, c))
-        {
-            Console.WriteLine("jest pitagorejski");
-        }
-        else
-        {
-            Console.WriteLine("nie jest pitagorejski");
-        }
-    }
-
-    public static bool SaPitagorejskie(double a, double b, double c)
-    {
-        if (Math.Pow(a, 2) == Math.Pow(b, 2) + Math.Pow(c, 2)) return true;
-        if (Math.Pow(b, 2) == Math.Pow(a, 2) + Math.Pow(c, 2)) return true;
-        if (Math.Pow(c, 2) == Math.Pow(a, 2) + Math.Pow(b, 2)) return true;
-
-        return false;
-    }
-    public static void DateOperations()
-    {
-        DateTime aktualnaData = DateTime.Now;
-
-        Console.WriteLine(aktualnaData.ToString("dd-MM-yyyy HH:mm:ss"));
-
-        DateTime za7Dni = aktualnaData.AddDays(7);
-        Console.WriteLine(za7Dni.ToString("dd-MM-yyyy HH:mm:ss"));
-
-        DateTime koniecRoku = new DateTime(aktualnaData.Year, 12, 31);
-        TimeSpan roznica = koniecRoku - aktualnaData;
-        Console.WriteLine(roznica.Days);
+        auta.Add(c1);
+        auta.Add(c2);
+        auta.Add(c3);
+        auta.Add(c4);
+        auta.Add(c5);
+        auta.Add(c6);
+        auta.Add(c7);
     }
 }
