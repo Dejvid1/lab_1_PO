@@ -1,1 +1,95 @@
+using System;
+public class FirstProgram
+{
+    public struct Student
+    {
+        public int Stypendium;
+        public int Numer_Indeksu;
+        public string Kierunek;
+        public string Imie;
+        public string Nazwisko;
 
+    }
+
+    public struct Rectangle
+    {
+        public int x;
+        public int y;
+        public float dlugosc;
+        public float szerokosc;
+
+        public void Pole()
+        {
+            
+            float p = dlugosc * szerokosc;
+            Console.WriteLine($"Pole: " + MathF.Round(p,2) );
+            Console.WriteLine($"Lewy gorny: {x}, {y}");
+            Console.WriteLine($"Prawy gorny: {x + szerokosc}, {y}");
+            Console.WriteLine($"Lewy dolny: {x}, {y - dlugosc}");
+            Console.WriteLine($"Prawy dolny: {x + szerokosc}, {y - dlugosc}");
+        }
+    }
+
+    public static void Main(string[] args)
+    {
+        //Zad1();
+        //Zad2();
+    }
+
+    public static void Zad1()
+    {
+        Random rnd = new Random();
+        Student s1 = new Student();
+        s1.Numer_Indeksu = rnd.Next(410000, 450001);
+        s1.Stypendium = rnd.Next(1200, 3301);
+        s1.Kierunek = "Informatyka";
+        s1.Imie = "Dawid";
+        s1.Nazwisko = "Szuber";
+        Student s2 = new Student();
+        s2.Numer_Indeksu = rnd.Next(410000, 450001);
+        s2.Stypendium = rnd.Next(1200, 3301);
+        s2.Kierunek = "matematyka";
+        s2.Imie = "jan";
+        s2.Nazwisko = "Kowalski";
+        Student s3 = new Student();
+        s3.Numer_Indeksu = rnd.Next(410000, 450001);
+        s3.Stypendium = rnd.Next(1200, 3301);
+        s3.Kierunek = "Informatyka stosowana";
+        s3.Imie = "Piotr";
+        s3.Nazwisko = "Nowak";
+        Student s4 = new Student();
+        s4.Numer_Indeksu = rnd.Next(410000, 450001);
+        s4.Stypendium = rnd.Next(1200, 3301);
+        s4.Kierunek = "Informatyka";
+        s4.Imie = "Pawel";
+        s4.Nazwisko = "Kowal";
+
+        Zad11(s1);
+        Zad11(s2);
+        Zad11(s3);
+        Zad11(s4);
+    }
+
+    public static void Zad11(Student student)
+    {
+        Console.WriteLine(student.Imie);
+        Console.WriteLine(student.Nazwisko);
+        Console.WriteLine(student.Kierunek);
+        Console.WriteLine(student.Stypendium);
+        Console.WriteLine(student.Numer_Indeksu);
+    }
+
+    public static void Zad2()
+    {
+        Rectangle r = new Rectangle();
+        Console.WriteLine("podaj x: ");
+        r.x = Console.Read();
+        Console.WriteLine("podaj y: ");
+        r.y = Console.Read();
+        Console.WriteLine("podaj dlugosc: ");
+        r.dlugosc = Console.Read();
+        Console.WriteLine("podaj szerokosc: ");
+        r.szerokosc = Console.Read();
+        r.Pole();
+    }
+}
