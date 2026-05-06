@@ -1,1 +1,28 @@
 
+using System;
+
+public class FirstProgram
+{
+    public class Animal
+    {
+        private string _name;
+        private int _weight;
+        private int _height;
+
+        public Animal(string name,int weigh,int height)
+        {
+            _name = name;
+            _weight = weigh;
+            _height = height;
+        }
+    }
+    public static void Main(string[] args)
+    {
+        Animal Tygrys = new Animal("tygrys",300,120);
+        Animal Slon = new Animal("Slon", 4500, 350);
+        Animal Kapibara = new Animal("Kapibara", 35, 30);
+        Animal Kon_Polski = new Animal("Kon Polski", 400, 180);
+        Animal[] animals = {Tygrys, Slon, Kapibara, Kon_Polski};
+    }
+ 
+}
