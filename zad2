@@ -1,1 +1,24 @@
 
+using System;
+
+public class FirstProgram
+{
+    public class Animal
+    {
+        private string _name;
+        private int _weight;
+        private int _height;
+
+        public Animal()
+        {
+            _name = "unknown";
+            _weight = 0;
+            _height = 0;
+        }
+    }
+    public static void Main(string[] args)
+    {
+
+    }
+ 
+}
