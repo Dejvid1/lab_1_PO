@@ -1,0 +1,26 @@
+using System;
+
+public class FirstProgram
+{
+    public static void Main(string[] args)
+    {
+        try
+        {
+            Console.Write("Podaj pierwszą liczbę: ");
+            int liczba1 = int.Parse(Console.ReadLine());
+
+            Console.Write("Podaj drugą liczbę (dzielnik): ");
+            int liczba2 = int.Parse(Console.ReadLine());
+
+
+            int wynik = liczba1 / liczba2;
+
+
+            Console.WriteLine("wynik:" + wynik);
+        }
+        catch (DivideByZeroException)
+        {
+            Console.WriteLine("nie można dzielic przez zero");
+        }
+    }
+}

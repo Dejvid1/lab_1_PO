@@ -1,0 +1,31 @@
+using System;
+
+public class FirstProgram
+{
+    public static void Main(string[] args)
+    {
+        List<int> lista = new List<int>();
+        string liczba;
+        while (true)
+        {
+            Console.WriteLine("podaj liczbe: ");
+            liczba = Console.ReadLine();
+
+            if (liczba == "k")
+            {
+                break;
+            }
+            if (int.TryParse(liczba, out int poprawnaLiczba))
+            {
+                lista.Add(poprawnaLiczba);
+            }
+            else
+            {
+                Console.WriteLine("to nie liczba");
+            }
+        }
+        int suma = lista.Where(x => x /2 ==0).Select(x => x * x).Sum();
+
+        Console.WriteLine("suma kwadratow: " + suma);
+    }
+}

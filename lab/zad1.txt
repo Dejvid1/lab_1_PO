@@ -1,0 +1,29 @@
+using System;
+
+public class FirstProgram
+{
+    public delegate float Miejsce_zerowe(float a, float b);
+   
+    public static void Main(string[] args)
+    {
+        Miejsce_zerowe miejsce_zerowe = Oblicz_miejsce_zerowe;
+
+        Console.Write("Podaj a: ");
+        float a = float.Parse(Console.ReadLine());
+
+        Console.Write("Podaj b: ");
+        float b = float.Parse(Console.ReadLine());
+        if (a != 0)
+        {
+            Console.WriteLine("wynik:" + miejsce_zerowe(a, b));
+        }
+        
+    }
+
+    public static float Oblicz_miejsce_zerowe(float a, float b)
+    {
+        
+        return -b / a;
+    }
+
+}
