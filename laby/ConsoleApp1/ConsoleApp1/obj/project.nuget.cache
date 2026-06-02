@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "8bOZN71qwRQ=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\dawid\\source\\repos\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dawid\\.nuget\\packages\\microsoft.dotnet.ilcompiler\\10.0.2\\microsoft.dotnet.ilcompiler.10.0.2.nupkg.sha512",
+    "C:\\Users\\dawid\\.nuget\\packages\\microsoft.net.illink.tasks\\10.0.2\\microsoft.net.illink.tasks.10.0.2.nupkg.sha512",
+    "C:\\Users\\dawid\\.nuget\\packages\\runtime.win-x64.microsoft.dotnet.ilcompiler\\10.0.2\\runtime.win-x64.microsoft.dotnet.ilcompiler.10.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
